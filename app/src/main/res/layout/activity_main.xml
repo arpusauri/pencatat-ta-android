@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F7F7"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105px"
+        android:background="@color/primary"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/viewbar"
+            android:layout_width="110px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/primary"
+            android:src="@drawable/ic_baseline_density_medium_24"/>
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18px"
+            android:layout_gravity="center"
+            android:text="Pencatatan TA"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:hint="NISN"
+                app:startIconDrawable="@drawable/ic_baseline_key_24"
+                app:helperText="Required*"
+                app:helperTextTextColor="#FF0000"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNoinduk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:maxLength="10"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/textInputLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Judul Tugas Akhir"
+                app:startIconDrawable="@drawable/ic_baseline_edit_note_24"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etJudul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/textInputLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="Nama Pemilik"
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPemilik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/textInputLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:hint="Nama Pembimbing"
+                app:startIconDrawable="@drawable/ic_baseline_person_24"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPembimbing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/textInputLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:hint="Tempat"
+                    app:startIconDrawable="@drawable/ic_baseline_place_24"
+                    app:boxStrokeColor="@color/primary"
+                    app:hintTextColor="@color/secondary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTempat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="3"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/textInputLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:hint="Tahun"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="4"
+                    app:startIconDrawable="@drawable/ic_baseline_date_range_24"
+                    app:boxStrokeColor="@color/primary"
+                    app:hintTextColor="@color/secondary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTahun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="4"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary"
+                android:layout_marginTop="50dp"
+                android:text="Simpan Data"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnShow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondary"
+                android:layout_marginTop="10dp"
+                android:text="Lihat Data"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
